@@ -100,7 +100,8 @@ $utilities = @{
     contents = @(
         [ChocoPackage]::new("7zip", "7zip.install"),
         [ChocoPackage]::new("mouse without borders", "mousewithoutborders"),
-        [ChocoPackage]::new("conemu"),
+        #[ChocoPackage]::new("conemu"), # removed because of Microsoft Terminal
+        [ChocoPackage]::new("microsoft terminal", "microsoft-windows-terminal"),
         [ChocoPackage]::new("dupeguru"),
         [ChocoPackage]::new("dupeguru-pe"),
         [ChocoPackage]::new("windirstat"),
@@ -108,7 +109,12 @@ $utilities = @{
         [ChocoPackage]::new("totalcommander"),
         [ChocoPackage]::new("curl"),
         [ChocoPackage]::new("sysinternals"),
-        [ChocoPackage]::new("freedownloadmanager", $false), #currently broken
+        [ChocoPackage]::new("mremoteng"),
+        [ChocoPackage]::new("expressvpn"),
+        [ChocoPackage]::new("powertoys"),
+        [ChocoPackage]::new("openvpn"),
+        [ChocoPackage]::new("wireguard", "wireguard --pre"),
+        [ChocoPackage]::new("free-download-manager"),
         [ChocoPackage]::new("refract-dns", $false) #not yet available
     );
 }
@@ -135,8 +141,9 @@ $comms = @{
     name     = "comms";
     contents = @(
         [ChocoPackage]::new("slack"),
-        [ChocoPackage]::new("microsoft teams", "microsoft-teams"),
-        [ChocoPackage]::new("caprine", $false) #not yet available
+        [ChocoPackage]::new("discord"),
+        #[ChocoPackage]::new("caprine"), #facebook messenger alternative
+        [ChocoPackage]::new("microsoft teams", "microsoft-teams")
     )
 }
 
@@ -183,6 +190,9 @@ $development = @{
 $browsers = @{
     name     = "browsers";
     contents = @(
+        [ChocoPackage]::new("edge", "microsoft-edge"),
+        [ChocoPackage]::new("edge beta", "microsoft-edge-insider"),
+        [ChocoPackage]::new("edge dev", "microsoft-edge-insider-dev"),
         [ChocoPackage]::new("firefox"),
         [ChocoPackage]::new("googlechrome"),
         [ChocoPackage]::new("vivaldi")
