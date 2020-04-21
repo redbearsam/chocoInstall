@@ -183,7 +183,9 @@ $development = @{
         [ChocoPackage]::new("vscode"),
         [ChocoPackage]::new("resharper", "resharper-platform"),
         [ChocoPackage]::new("intellij", "intellijidea-community"),
-        [ChocoPackage]::new("tortoisegit")
+        [ChocoPackage]::new("tortoisegit"),
+        [ChocoPackage]::new("azure storage explorer", "microsoftazurestorageexplorer"),
+        [ChocoPackage]::new("azure portal", $false)
     )
 }
 
